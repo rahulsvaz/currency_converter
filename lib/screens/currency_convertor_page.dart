@@ -13,7 +13,6 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(10),
               margin: const EdgeInsets.all(10),
-              
               child: const Text(
                 '0',
                 style: TextStyle(
@@ -29,20 +28,32 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
                   decimal: true,
                 ),
                 decoration: InputDecoration(
-                    prefixIcon: const Icon(Icons.currency_exchange),
+                    prefixIcon: const Icon(
+                      Icons.currency_exchange,
+                      color: Colors.white,
+                    ),
                     hintText: 'Please enter the amount in usd',
                     hintStyle: const TextStyle(color: Colors.white60),
                     border: const OutlineInputBorder(),
                     focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30)),
+                        borderRadius: BorderRadius.circular(3)),
                     enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25))),
+                        borderRadius: BorderRadius.circular(3))),
               ),
             ),
-            const SizedBox(
-              height: 30,
-            ),
-            ElevatedButton(onPressed: () {}, child: Text('Convert'),)
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ButtonStyle(
+                    elevation: const MaterialStatePropertyAll(55),
+                    minimumSize:
+                        MaterialStateProperty.all(Size(double.infinity, 50)),
+                    foregroundColor: MaterialStateProperty.all(Colors.white),
+                    backgroundColor: MaterialStateProperty.all(Colors.black)),
+                child: const Text('Convert'),
+              ),
+            )
           ],
         ),
       ),
