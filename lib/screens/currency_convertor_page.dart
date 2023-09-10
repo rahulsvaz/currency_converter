@@ -46,11 +46,12 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: () {},
                 style: ButtonStyle(
-                    elevation: const MaterialStatePropertyAll(55),
-                    minimumSize:
-                        MaterialStateProperty.all(Size(double.infinity, 50)),
-                    foregroundColor: MaterialStateProperty.all(Colors.white),
-                    backgroundColor: MaterialStateProperty.all(Colors.black)),
+                  elevation: const MaterialStatePropertyAll(55),
+                  minimumSize: MaterialStateProperty.all(
+                      const Size(double.infinity, 50)),
+                  foregroundColor: MaterialStateProperty.all(Colors.white),
+                  backgroundColor: MaterialStateProperty.all(Colors.black),
+                ),
                 child: const Text('Convert'),
               ),
             )
